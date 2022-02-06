@@ -1,6 +1,11 @@
 //====================================================================================================
 .header {
-	@include adaptiveValue("padding-bottom", 102, 30);
+	z-index: 10;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	transition: box-shadow 0.3s;
 	@media (max-width: $mobile) {
 		&::before {
 			content: "";
@@ -9,7 +14,7 @@
 			top: 0;
 			left: 0;
 			width: 100%;
-			height: rem(72);
+			height: rem(60);
 			transform: translate(100%, 0);
 			background-color: #eeebff;
 			transition: transform 0.3s;
@@ -20,17 +25,34 @@
 			}
 		}
 	}
+	&.header--scroll {
+		box-shadow: 0 rem(5) rem(20) rem(-5) rgb(#aaa, 0.6);
+		background-color: #fff;
+		.header__body {
+			min-height: rem(100);
+			@media (max-width: $tablet) {
+				min-height: rem(80);
+			}
+			@media (max-width: $mobile) {
+				min-height: rem(60);
+			}
+		}
+	}
 	// .header__body
 	&__body {
 		display: flex;
 		align-items: center;
 		padding: rem(5) 0;
 		min-height: rem(236);
+		transition: min-height 0.3s;
 		@media (max-width: $pc) {
 			min-height: rem(100);
 		}
 		@media (max-width: $tablet) {
-			min-height: rem(62);
+			min-height: rem(80);
+		}
+		@media (max-width: $mobile) {
+			min-height: rem(60);
 		}
 	}
 	// .header__logo
@@ -76,6 +98,15 @@
 		@media (max-width: $mobile) {
 			width: 100%;
 			margin-left: 0;
+		}
+	}
+}
+.logo {
+	&__icon {
+		img {
+			@media (max-width: $mobile) {
+				height: rem(42);
+			}
 		}
 	}
 }

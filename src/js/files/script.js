@@ -71,3 +71,10 @@ class Burger {
 	}
 }
 const burger = new Burger();
+
+const header = document.querySelector('.header');
+
+window.addEventListener('scroll', () => {
+	window.pageYOffset > 10 ? header.classList.add('header--scroll') :
+		header.classList.remove('header--scroll');
+})

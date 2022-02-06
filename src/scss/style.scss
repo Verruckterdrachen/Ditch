@@ -84,6 +84,7 @@ body {
 .page {
 	// .page__hero
 	&__hero {
+		@include adaptiveValue("padding-top", 338, 80);
 		@include adaptiveValue("padding-bottom", 198, 40);
 	}
 }
