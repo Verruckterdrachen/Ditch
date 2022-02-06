@@ -1,5 +1,6 @@
 //====================================================================================================
 .header {
+	@include adaptiveValue("padding-bottom", 102, 30);
 	@media (max-width: $mobile) {
 		&::before {
 			content: "";
@@ -34,7 +35,7 @@
 	}
 	// .header__logo
 	&__logo {
-		z-index: 5;
+		z-index: 10;
 		flex: 1 1 auto;
 		padding-right: rem(30);
 	}
@@ -43,6 +44,7 @@
 		display: flex;
 		align-items: center;
 		@media (max-width: $mobile) {
+			z-index: 5;
 			visibility: hidden;
 			position: fixed;
 			top: 0;
@@ -106,6 +108,12 @@
 		@media (max-width: $mobile) {
 			font-size: rem(22);
 		}
+		@media (any-hover: hover) {
+			transition: color 0.3s;
+			&:hover {
+				color: var(--color-black);
+			}
+		}
 	}
 }
 //====================================================================================================
@@ -120,7 +128,7 @@
 		flex: 0 0 rem(30);
 		width: rem(30);
 		height: rem(18);
-		z-index: 5;
+		z-index: 10;
 		span,
 		&::before,
 		&::after {
