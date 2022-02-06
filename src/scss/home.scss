@@ -169,5 +169,22 @@
 	}
 }
 //====================================================================================================
+.partners {
+	@include adaptiveValue("padding-top", 100, 50);
+	@include adaptiveValue("padding-bottom", 100, 50);
+	background-color: var(--color-pink);
+	// .partners__title
+	&__title {
+		color: var(--color-gray-light);
+		margin-bottom: em(20, 20);
+	}
+	// .partners__body
+	&__body {
+		display: grid;
+		column-gap: rem(80);
+		row-gap: rem(30);
+		grid-template-columns: repeat(auto-fit, minmax(rem(157), 1fr));
+	}
+}
 //====================================================================================================
 //====================================================================================================
