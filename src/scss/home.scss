@@ -379,4 +379,48 @@
 	}
 }
 //====================================================================================================
+.careers {
+	// .careers__title
+	&__title {
+		@include adaptiveValue("margin-bottom", 150, 30);
+	}
+}
+.table {
+	display: grid;
+	@include adaptiveValue("row-gap", 80, 20);
+	// .table__row
+	&__row {
+		display: grid;
+		@include adaptiveValue("column-gap", 40, 15);
+		grid-template-columns: repeat(3, 1fr);
+	}
+	// .table__header
+	&__header {
+		text-transform: uppercase;
+		font-size: rem(16);
+		font-weight: 500;
+		line-height: math.div(24, 16);
+		text-align: left;
+		&:last-child {
+			text-align: right;
+		}
+	}
+	// .table__body
+	&__body {
+		display: grid;
+		@include adaptiveValue("row-gap", 80, 15);
+	}
+	// .table__data
+	&__data {
+		font-size: rem(16);
+		line-height: math.div(24, 16);
+		span {
+			color: var(--color-black);
+			font-weight: 600;
+		}
+		&:last-child {
+			text-align: right;
+		}
+	}
+}
 //====================================================================================================
