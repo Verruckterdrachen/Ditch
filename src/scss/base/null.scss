@@ -22,9 +22,9 @@ body {
 	min-width: $minWidth + px;
 }
 body {
-	font-size: var(--font-size, 100%);
-	line-height: var(--line-height, 1.15);
-	font-family: var(--font-family, sans-serif);
+	font-size: $fontSize;
+	line-height: $lineHeight;
+	font-family: $fontFamily;
 	color: var(--color-gray);
 	//text-rendering: optimizeLegibility;
 	-ms-text-size-adjust: 100%;
