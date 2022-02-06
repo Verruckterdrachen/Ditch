@@ -1,1 +1,9 @@
-// Заголовки, общие БЄМ блоки и проче...
+.title {
+	max-width: rem(1040);
+	margin: 0 auto;
+	text-align: center;
+	color: var(--color-black);
+	@include adaptiveValue("font-size", 48, 26);
+	line-height: math.div(48, 48);
+	font-weight: 600;
+}
