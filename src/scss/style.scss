@@ -85,18 +85,23 @@ body {
 	// .page__hero
 	&__hero {
 		@include adaptiveValue("padding-top", 338, 80);
-		@include adaptiveValue("padding-bottom", 198, 40);
+		@include adaptiveValue("padding-bottom", 198, 50);
 	}
 	// .page__works
 	&__works {
-		@include adaptiveValue("padding-bottom", 150, 40);
+		@include adaptiveValue("padding-bottom", 150, 50);
 	}
 	// .page__partners
 	&__partners {
-		@include adaptiveValue("margin-bottom", 150, 40);
+		@include adaptiveValue("margin-bottom", 150, 50);
 	}
 	// .page__projects
 	&__projects {
+		@include adaptiveValue("padding-bottom", 150, 50);
+	}
+	// .page__services
+	&__services {
+		@include adaptiveValue("padding-bottom", 150, 50);
 	}
 }
 // Ограничивающий контейнер ======================================================================================================================================================================================================================
