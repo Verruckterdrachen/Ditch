@@ -106,7 +106,7 @@
 	&__body {
 		@media (min-width: $tablet) {
 			display: grid;
-			@include adaptiveValue("column-gap", 50, 0);
+			@include adaptiveValue("gap", 50, 0);
 			grid-template-columns: rem(440) 1fr;
 		}
 	}

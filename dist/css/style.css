@@ -717,14 +717,14 @@ h6 {
     display: grid;
     grid-template-columns: 27.5rem 1fr;
   }
-  @supports (column-gap: clamp( 0rem , -1.1235955056rem  +  5.6179775281vw , 3.125rem )) {
+  @supports (gap: clamp( 0rem , -1.1235955056rem  +  5.6179775281vw , 3.125rem )) {
     .works__body {
-      column-gap: clamp( 0rem , -1.1235955056rem  +  5.6179775281vw , 3.125rem );
+      gap: clamp( 0rem , -1.1235955056rem  +  5.6179775281vw , 3.125rem );
     }
   }
-  @supports not (column-gap: clamp( 0rem , -1.1235955056rem  +  5.6179775281vw , 3.125rem )) {
+  @supports not (gap: clamp( 0rem , -1.1235955056rem  +  5.6179775281vw , 3.125rem )) {
     .works__body {
-      column-gap: calc(0rem + 3.125 * (100vw - 20rem) / 55.625);
+      gap: calc(0rem + 3.125 * (100vw - 20rem) / 55.625);
     }
   }
 }
